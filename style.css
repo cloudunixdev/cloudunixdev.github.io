@@ -10,7 +10,7 @@
   --green-3:#0b8f43;
   --mint:#eaffea;
   --mint-2:#f3fff3;
-  --border:#2b9348;
+  --border:#31c15b;
   --text:#123028;
   --muted:#4b6b5f;
   --shadow: 0 10px 25px rgba(0,0,0,.08);
@@ -38,12 +38,13 @@ body{
 
 table.routine{
   width:100%;
-  border-collapse: collapse;
+  border-collapse: collapse;   /* সব বর্ডার এক লাইনে বসবে */
   background: white;
   box-shadow: var(--shadow);
   text-align: center;
 }
 
+/* প্রতিটি সেলের চারদিকে বর্ডার */
 .routine th, .routine td{
   border: 1px solid var(--border);
   padding: 12px;
@@ -81,19 +82,4 @@ table.routine{
   text-align: center;
   color: var(--muted);
   margin: 10px auto 30px;
-}
-
-/* 🔽 প্রিন্ট–ফ্রেন্ডলি সেটিং */
-@media print {
-  body{
-    background: white !important;
-  }
-  table.routine, .routine th, .routine td {
-    border: 1px solid #000 !important;  /* প্রিন্টে কালো বর্ডার */
-  }
-  .routine th {
-    background: #e0e0e0 !important;    /* প্রিন্টে হেডার স্পষ্ট */
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
 }
