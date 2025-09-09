@@ -1,0 +1,85 @@
+@counter-style bangla {
+  system: numeric;
+  symbols: "০" "১" "২" "৩" "৪" "৫" "৬" "৭" "৮" "৯";
+  suffix: ". ";
+}
+
+:root{
+  --green-1:#1faa59;
+  --green-2:#16a34a;
+  --green-3:#0b8f43;
+  --mint:#eaffea;
+  --mint-2:#f3fff3;
+  --border:#31c15b;
+  --text:#123028;
+  --muted:#4b6b5f;
+  --shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+body{
+  background: linear-gradient(180deg, #f7fff9, #ffffff);
+  font-family: "Noto Sans Bengali", "Hind Siliguri", "SolaimanLipi", sans-serif;
+  color: var(--text);
+  line-height:1.6;
+}
+
+.title{
+  text-align:center;
+  color: var(--green-2);
+  margin: 22px 10px 12px;
+  font-weight:800;
+}
+
+.table-wrap{
+  padding: 10px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+table.routine{
+  width:100%;
+  border-collapse: collapse;   /* সব বর্ডার এক লাইনে বসবে */
+  background: white;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+/* প্রতিটি সেলের চারদিকে বর্ডার */
+.routine th, .routine td{
+  border: 1px solid var(--border);
+  padding: 12px;
+  vertical-align: middle;
+}
+
+.routine thead th{
+  background: linear-gradient(135deg, #ecfff1, #d9ffe6);
+  color: #0e5135;
+  font-weight: 800;
+}
+
+.time{
+  font-weight: 700;
+  color: var(--green-3);
+  background: var(--mint-2);
+  white-space: nowrap;
+}
+
+.routine tbody tr:nth-child(even) td{ background:#fcfffc; }
+.routine tbody tr:hover td{ background:#f4fff6; transition: background .2s ease; }
+
+.ol-bangla{
+  list-style: bangla;
+  list-style-position: inside;
+  margin: 0 auto;
+  padding: 0;
+  display: inline-block;
+  text-align: left;
+}
+
+.ol-bangla li{ padding: 2px 0; }
+
+.note{
+  text-align: center;
+  color: var(--muted);
+  margin: 10px auto 30px;
+}
